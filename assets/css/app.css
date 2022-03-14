@@ -50,6 +50,11 @@ button:focus-visible {
     outline   : none;
 }
 
+img,
+svg {
+    vertical-align: middle;
+}
+
 .row {
     display  : flex;
     flex-wrap: wrap;
@@ -59,6 +64,71 @@ button:focus-visible {
     max-width: 1400px;
     width    : 100%;
     margin   : 0 auto;
+}
+
+.section_header {
+    margin-bottom: 8.8rem;
+}
+
+.section_title {
+    font-weight   : 800;
+    font-size     : 6.8rem;
+    line-height   : 6.4rem;
+    text-transform: uppercase;
+}
+
+.section_title span {
+    color: var(--gray);
+}
+
+.btn {
+    font-family: var(--rubik);
+    font-weight   : 600;
+    font-size     : 1.6rem;
+    line-height   : 1.9rem;
+    text-transform: uppercase;
+    border-radius : 5rem;
+    border        : 2px solid #B0B0B0;
+    transition    : all .3s ease-in-out;
+
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    padding        : 2.4rem 4rem;
+}
+
+.btn:hover {
+    color           : var(--white);
+    background-color: var(--black);
+    border          : 2px solid var(--black);
+}
+
+.btn.black {
+    color           : var(--white);
+    background-color: var(--black);
+    border          : 2px solid var(--black);
+}
+
+.btn.black:hover {
+    color           : var(--black);
+    background-color: transparent;
+    border          : 2px solid var(--gray);
+}
+
+.btn img {
+    margin-right: 1rem;
+    transition  : all .3s ease-in-out;
+}
+
+.btn:hover img {
+    filter: grayscale(0) invert(1);
+}
+
+/* fixed button */
+.fixed_button {
+    position: fixed;
+    right   : 6.25%;
+    bottom  : 5vh;
 }
 
 
@@ -99,6 +169,7 @@ nav .container_fluid {
 .hero_section {
     padding: 8.2rem 0;
 }
+
 .hero_section .row>* {
     flex     : 0 0 50%;
     max-width: 50%;
@@ -106,7 +177,7 @@ nav .container_fluid {
 
 .hero_section .content_wrapper {
     height         : 100%;
-    max-width: 50.8rem;
+    max-width      : 50.8rem;
     display        : flex;
     flex-direction : column;
     justify-content: center;
@@ -114,16 +185,16 @@ nav .container_fluid {
 }
 
 .hero_section .content_wrapper h1 {
-    font-weight: 800;
-    font-size  : 8.0rem;
-    line-height: 7.4rem;
+    font-weight   : 800;
+    font-size     : 8.0rem;
+    line-height   : 7.4rem;
     text-transform: uppercase;
+    margin-bottom : 4.8rem;
 }
+
 .hero_section .content_wrapper h1 span {
     color: var(--gray);
 }
-
-.hero_section .content_wrapper .btn {}
 
 .hero_section .image_wrapper {
     height    : 100%;
@@ -132,4 +203,178 @@ nav .container_fluid {
 
 .hero_section .image_wrapper img {
     max-width: 60.4rem;
+}
+
+/* services sectoin */
+.services_section {
+    padding: 13.8rem 11.6rem;
+}
+
+.services_section.bg {
+    background-color: #F8F8F8;
+}
+
+.services_section .row {
+    margin-top  : -6.6rem;
+    margin-left : -1.6rem;
+    margin-right: -1.6rem;
+}
+
+.services_section .row>* {
+    flex         : 0 0 33.33333333%;
+    max-width    : 33.33333333%;
+    padding-top  : 6.6rem;
+    padding-left : 1.6rem;
+    padding-right: 1.6rem;
+}
+
+.services_section .content_wrapper .icon {
+    width        : 10rem;
+    height       : 10rem;
+    background   : #F1F1F1;
+    border-radius: 8px;
+
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    margin-bottom  : 1.6rem;
+}
+
+.services_section .content_wrapper .icon>img {
+    max-width: 5.5rem;
+    width    : 100%;
+}
+
+.services_section .content_wrapper h4 {
+    font-weight: 700;
+    font-size  : 3.2rem;
+    line-height: 3.4rem;
+
+    max-width: 33.5rem;
+}
+
+/* get started with us right now */
+.gswurn .content_wrapper {
+    background-color: var(--black);
+    color           : var(--white);
+    position        : relative;
+    border-radius   : 1.6rem;
+    padding         : 14.8rem 4.8rem;
+}
+
+.gswurn .inner_content {
+    max-width: 52.5rem;
+}
+
+.gswurn .content_wrapper h1 {
+    margin-bottom: 4rem;
+}
+
+.gswurn .content_wrapper .btn {
+    color: var(--white);
+}
+
+.gswurn .content_wrapper .btn:hover {
+    background-color: var(--white);
+    color           : var(--black);
+}
+.gswurn .content_wrapper img.canva, .gswurn .content_wrapper img.round, .gswurn .content_wrapper img.blob {
+    position                 : absolute;
+}
+.gswurn .content_wrapper img.round {
+    top: 10.5rem;
+    right: 46.4rem;
+}
+.gswurn .content_wrapper img.blob {
+    top: 7.8rem;
+    right: 4.9rem;
+}
+
+.gswurn .content_wrapper img.canva {
+    right                    : 2.6rem;
+    bottom                   : -2.6rem;
+    max-width                : 66rem;
+    /* transform             : rotate(0); */
+    animation-name           : rotate-4;
+    animation-duration       : 2.5s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate-4 {
+    0% {
+        transform: rotate(2deg);
+    }
+    100% {
+        transform: rotate(-4deg);
+    }
+}
+
+/* our cool projects */
+.col_proj_section {
+    padding: 13.8rem 0;
+}
+
+.col_proj_section .row {
+    margin-left : -1.2rem;
+    margin-right: -1.2rem;
+}
+
+.col_proj_section .row>* {
+    flex         : 0 0 50%;
+    max-width    : 50%;
+    padding-left : 1.2rem;
+    padding-right: 1.2rem;
+}
+
+.col_proj_section .content_wrapper {
+    border-radius: 1.6rem;
+    overflow     : hidden;
+    position     : relative;
+}
+
+.col_proj_section .inner_content {
+    max-width: 39.3rem;
+    position : absolute;
+    left     : 5.6rem;
+    bottom   : 5.3rem;
+    color    : var(--white);
+}
+
+.col_proj_section .inner_content h2 {
+    font-weight  : 800;
+    font-size    : 4.0rem;
+    line-height  : 4.2rem;
+    color        : inherit;
+    margin-bottom: 4rem;
+}
+
+.col_proj_section .inner_content a {
+    font-family   : var(--rubik);
+    font-weight   : 600;
+    font-size     : 1.6rem;
+    line-height   : 1.9rem;
+    text-transform: uppercase;
+    color         : #797979;
+    border-bottom : 1px solid #797979;
+    transition    : all .5s ease-in-out;
+    padding-bottom: .8rem;
+}
+
+.col_proj_section .inner_content a:hover {
+    color        : var(--white);
+    border-bottom: 1px solid var(--white);
+}
+
+.col_proj_section .inner_content a svg,
+.col_proj_section .inner_content a svg path {
+    transition: all .5s ease-in-out;
+}
+
+.col_proj_section .inner_content a:hover svg {
+    transform: rotate(45deg);
+}
+
+.col_proj_section .inner_content a:hover svg path {
+    fill: var(--white);
 }
