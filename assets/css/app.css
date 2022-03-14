@@ -55,6 +55,56 @@ svg {
     vertical-align: middle;
 }
 
+/* owl nav */
+.owl-carousel .owl-nav button:not(:last-of-type) {
+    margin-right: 1.6rem;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+    width: 5.6rem;
+    height: 5.6rem;
+    border-radius: 50%;
+    border: 1px solid #ACACAC;
+}
+
+/* owl dots */
+.owl-carousel .owl-dots {
+    text-align: center;
+    margin-top: 7.2rem;
+}
+.owl-carousel button.owl-dot:not(:last-of-type) {
+    margin-right: .8rem;
+}
+.owl-carousel button.owl-dot {
+    width           : 2.2rem;
+    height          : 2.2rem;
+    background-color: transparent;
+    border-radius   : 50%;
+
+    display        : inline-flex;
+    justify-content: center;
+    align-items    : center;
+    transition     : border .5s ease-in-out;
+}
+
+.owl-carousel button.owl-dot.active {
+    border: 1px solid var(--black);
+}
+
+.owl-carousel button.owl-dot span {
+    width           : 1.4rem;
+    height          : 1.4rem;
+    background-color: #D8D8D8;
+    border-radius   : 50%;
+    transition     : border .5s ease-in-out;
+}
+.owl-carousel button.owl-dot.active span {
+    background-color: var(--black);
+}
+
+.owl-dot span {
+    display: inline-block;
+}
+
 .row {
     display  : flex;
     flex-wrap: wrap;
@@ -82,7 +132,7 @@ svg {
 }
 
 .btn {
-    font-family: var(--rubik);
+    font-family   : var(--rubik);
     font-weight   : 600;
     font-size     : 1.6rem;
     line-height   : 1.9rem;
@@ -253,6 +303,80 @@ nav .container_fluid {
     max-width: 33.5rem;
 }
 
+/* testmonial section */
+.testimonial {
+    padding: 12.2rem 0 8.2rem;
+    position: relative;
+}
+
+.testimonial .card {
+    background   : rgba(255, 255, 255, 0.9);
+    border       : 1px solid #E1E1E1;
+    border-radius: .8rem;
+    position     : relative;
+    padding      : 8.8rem 4rem 4rem;
+}
+
+.testimonial .card h2 {
+    font-weight   : 800;
+    font-size     : 3.2rem;
+    line-height   : 3.8rem;
+    text-transform: uppercase;
+    max-width     : 33.4rem;
+    min-height    : 30rem;
+}
+
+.testimonial .card>img {
+    position: absolute;
+    top     : 1.5rem;
+    right   : 2.1rem;
+    width   : 9.4rem;
+}
+
+.testimonial .card_footer {
+    display        : flex;
+    justify-content: flex-start;
+    align-items    : center;
+
+    border-top : 1px solid #E1E1E1;
+    padding-top: 3.2rem;
+}
+
+.testimonial .card_footer .thumb {
+    flex        : 0 0 5.6rem;
+    margin-right: 1.6rem;
+}
+
+.testimonial .card_footer .thumb>img {
+    width        : 5.6rem;
+    height       : 5.6rem;
+    border-radius: 50%;
+}
+
+.testimonial .card_footer h5,
+.testimonial .card_footer p {
+    font-family   : var(--rubik);
+    font-size     : 1.6rem;
+    line-height   : 1.9rem;
+    text-transform: uppercase;
+}
+
+.testimonial .card_footer h5 {
+    font-weight  : 500;
+    margin-bottom: .7rem;
+}
+
+.testimonial .card_footer p {
+    font-weight: 400;
+    color      : #898989;
+}
+
+.testimonial .owl-carousel .owl-nav {
+    position: absolute;
+    top: -15rem;
+    right: 0;
+}
+
 /* get started with us right now */
 .gswurn .content_wrapper {
     background-color: var(--black);
@@ -278,15 +402,20 @@ nav .container_fluid {
     background-color: var(--white);
     color           : var(--black);
 }
-.gswurn .content_wrapper img.canva, .gswurn .content_wrapper img.round, .gswurn .content_wrapper img.blob {
-    position                 : absolute;
+
+.gswurn .content_wrapper img.canva,
+.gswurn .content_wrapper img.round,
+.gswurn .content_wrapper img.blob {
+    position: absolute;
 }
+
 .gswurn .content_wrapper img.round {
-    top: 10.5rem;
+    top  : 10.5rem;
     right: 46.4rem;
 }
+
 .gswurn .content_wrapper img.blob {
-    top: 7.8rem;
+    top  : 7.8rem;
     right: 4.9rem;
 }
 
@@ -297,7 +426,7 @@ nav .container_fluid {
     /* transform             : rotate(0); */
     animation-name           : rotate-4;
     animation-duration       : 2.5s;
-    animation-direction: alternate-reverse;
+    animation-direction      : alternate-reverse;
     animation-iteration-count: infinite;
 }
 
@@ -305,6 +434,7 @@ nav .container_fluid {
     0% {
         transform: rotate(2deg);
     }
+
     100% {
         transform: rotate(-4deg);
     }
