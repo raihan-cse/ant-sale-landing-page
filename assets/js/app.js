@@ -36,4 +36,12 @@ $(document).ready(function() {
             }
         }
     })
+
+    //modal show / hide functionality
+    $('.request').on('click', function() {
+        $('.modal, .modal_backdrop').addClass('show');
+    })
+    $('.modal_backdrop, .btn_close').on('click', function() {
+        $('.modal, .modal_backdrop').removeClass('show');
+    })
 })
