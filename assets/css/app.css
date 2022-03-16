@@ -559,7 +559,7 @@ nav .container_fluid {
     color           : var(--white);
     position        : relative;
     border-radius   : 1.6rem;
-    padding         : 14.8rem 4.8rem;
+    padding         : 14.8rem 8rem;
 }
 
 .gswurn .inner_content {
@@ -699,9 +699,9 @@ nav .container_fluid {
     justify-content: space-between;
 }
 
-.footer_logo img {
+/* .footer_logo img {
     width: 15rem;
-}
+} */
 
 .contact_info_wrapper ul,
 .contact_info_wrapper li {
